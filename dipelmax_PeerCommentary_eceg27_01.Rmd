@@ -9,6 +9,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+#Comments - cece
+#Challange 1: I was having trouble splitting things into 3 as well, I ended up not using stringr and instead using the command "a <-vector[seq(1, length(vector), 3)]" which pulls out every 3rd character starting at 1 for the length of the vector. You may also wants to put " " around every word of the vector, it may not be recognizing them as separate entities, but instead one long single character. 
+
 # Challenge 1
 ```{r}
 # Challenge 1
@@ -27,6 +30,8 @@ answer
 
 ### Could not get every third word
 
+#Comments - Cece
+#Challange 2: Everything runs well. The first and last ones look the same as mine, but the two middle ones could be coded to be a bit shorter. You don't need to make "c2, c3, and c6" or "r6 and r8" before extracting the values. You can just do it all at once with the "c" function "x <-m[,c(2,3,6)]"
 
 # Challenge 2
 ```{r}
@@ -51,6 +56,8 @@ x
 x <- m[2,2]:m[6,9]
 ```
 
+#Comments - cece
+#challenge 3: looks exactly like mine and runs well, no suggestions here
 
 # Challenge 3
 ```{r}
@@ -63,6 +70,8 @@ a[2,3,2,]
 a[1:5, 1:5, 3, 3]
 ```
 
+#comments = cece
+#challange 4:again, runs well and looks just like mine, no comments
 
 # Challenge 4
 ```{r}
@@ -92,7 +101,8 @@ Primates
 
 ```
 
-
+#comments - cece
+#challenge 5: The first two commands are the same as mine, or atleast give the same output, so I think they are fine. I am not that confident in my own code for the "make logical and make factor" bit. I don't know what the outputs should be, your new_df gives an output, but your factor_df gives the error "cannot xtfrm data frames". I wish I could be more help, but I am also confused on the last 2 commands. 
 # Challenge 5
 ```{r}
 
@@ -105,5 +115,6 @@ new_df
 factor_df <- as.factor(df[df$X3, ])
 factor_df
 ```
+
 
 
