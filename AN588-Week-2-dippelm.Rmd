@@ -16,12 +16,11 @@ vector <- c("Stately, plump Buck Mulligan came from the stairhead, bearing a bow
 vector
 # install.packages("stringr")
 library(stringr)
-?stringr
-?str_split
-str_split(vector, " ", n = 3)
+split_vector <- str_split(vector, " ", n = Inf)
+split_vector[seq(1, length(split_vector), 3)]
 ```
 
-## Could not get every third word
+### Could not get every third word
 
 
 # Challenge 2
@@ -47,7 +46,7 @@ x
 x <- m[2,2]:m[6,9]
 ```
 
-## Not sure which is the correct format to put the numbers in 
+### Not sure which is the correct format to put the numbers in 
 
 
 # Challenge 3
