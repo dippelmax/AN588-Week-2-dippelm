@@ -363,15 +363,45 @@ vector</code></pre>
 <pre><code>## [1] &quot;Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.&quot;</code></pre>
 <pre class="r"><code># install.packages(&quot;stringr&quot;)
 library(stringr)
-?stringr
-?str_split
-str_split(vector, &quot; &quot;, n = 3)</code></pre>
+split_vector &lt;- str_split(vector, &quot; &quot;, n = Inf)
+split_vector[seq(1, length(split_vector), by = 3)]</code></pre>
 <pre><code>## [[1]]
-## [1] &quot;Stately,&quot;                                                                                                  
-## [2] &quot;plump&quot;                                                                                                     
-## [3] &quot;Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.&quot;</code></pre>
-<div id="could-not-get-every-third-word" class="section level2">
-<h2>Could not get every third word</h2>
+##  [1] &quot;Stately,&quot;   &quot;plump&quot;      &quot;Buck&quot;       &quot;Mulligan&quot;   &quot;came&quot;      
+##  [6] &quot;from&quot;       &quot;the&quot;        &quot;stairhead,&quot; &quot;bearing&quot;    &quot;a&quot;         
+## [11] &quot;bowl&quot;       &quot;of&quot;         &quot;lather&quot;     &quot;on&quot;         &quot;which&quot;     
+## [16] &quot;a&quot;          &quot;mirror&quot;     &quot;and&quot;        &quot;a&quot;          &quot;razor&quot;     
+## [21] &quot;lay&quot;        &quot;crossed.&quot;</code></pre>
+<pre class="r"><code>split_vector[seq(from = 1, length(split_vector), by = 5)]</code></pre>
+<pre><code>## [[1]]
+##  [1] &quot;Stately,&quot;   &quot;plump&quot;      &quot;Buck&quot;       &quot;Mulligan&quot;   &quot;came&quot;      
+##  [6] &quot;from&quot;       &quot;the&quot;        &quot;stairhead,&quot; &quot;bearing&quot;    &quot;a&quot;         
+## [11] &quot;bowl&quot;       &quot;of&quot;         &quot;lather&quot;     &quot;on&quot;         &quot;which&quot;     
+## [16] &quot;a&quot;          &quot;mirror&quot;     &quot;and&quot;        &quot;a&quot;          &quot;razor&quot;     
+## [21] &quot;lay&quot;        &quot;crossed.&quot;</code></pre>
+<pre class="r"><code>split_vector</code></pre>
+<pre><code>## [[1]]
+##  [1] &quot;Stately,&quot;   &quot;plump&quot;      &quot;Buck&quot;       &quot;Mulligan&quot;   &quot;came&quot;      
+##  [6] &quot;from&quot;       &quot;the&quot;        &quot;stairhead,&quot; &quot;bearing&quot;    &quot;a&quot;         
+## [11] &quot;bowl&quot;       &quot;of&quot;         &quot;lather&quot;     &quot;on&quot;         &quot;which&quot;     
+## [16] &quot;a&quot;          &quot;mirror&quot;     &quot;and&quot;        &quot;a&quot;          &quot;razor&quot;     
+## [21] &quot;lay&quot;        &quot;crossed.&quot;</code></pre>
+<pre class="r"><code>split_vector</code></pre>
+<pre><code>## [[1]]
+##  [1] &quot;Stately,&quot;   &quot;plump&quot;      &quot;Buck&quot;       &quot;Mulligan&quot;   &quot;came&quot;      
+##  [6] &quot;from&quot;       &quot;the&quot;        &quot;stairhead,&quot; &quot;bearing&quot;    &quot;a&quot;         
+## [11] &quot;bowl&quot;       &quot;of&quot;         &quot;lather&quot;     &quot;on&quot;         &quot;which&quot;     
+## [16] &quot;a&quot;          &quot;mirror&quot;     &quot;and&quot;        &quot;a&quot;          &quot;razor&quot;     
+## [21] &quot;lay&quot;        &quot;crossed.&quot;</code></pre>
+<pre class="r"><code>answer &lt;- split_vector[seq(1, length(22), 6)]
+answer</code></pre>
+<pre><code>## [[1]]
+##  [1] &quot;Stately,&quot;   &quot;plump&quot;      &quot;Buck&quot;       &quot;Mulligan&quot;   &quot;came&quot;      
+##  [6] &quot;from&quot;       &quot;the&quot;        &quot;stairhead,&quot; &quot;bearing&quot;    &quot;a&quot;         
+## [11] &quot;bowl&quot;       &quot;of&quot;         &quot;lather&quot;     &quot;on&quot;         &quot;which&quot;     
+## [16] &quot;a&quot;          &quot;mirror&quot;     &quot;and&quot;        &quot;a&quot;          &quot;razor&quot;     
+## [21] &quot;lay&quot;        &quot;crossed.&quot;</code></pre>
+<div id="could-not-get-every-third-word" class="section level3">
+<h3>Could not get every third word</h3>
 </div>
 </div>
 <div id="challenge-2" class="section level1">
@@ -422,9 +452,6 @@ x</code></pre>
 ##  [9,] 70 72
 ## [10,] 78 80</code></pre>
 <pre class="r"><code>x &lt;- m[2,2]:m[6,9]</code></pre>
-<div id="not-sure-which-is-the-correct-format-to-put-the-numbers-in" class="section level2">
-<h2>Not sure which is the correct format to put the numbers in</h2>
-</div>
 </div>
 <div id="challenge-3" class="section level1">
 <h1>Challenge 3</h1>
