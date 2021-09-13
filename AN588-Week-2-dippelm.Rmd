@@ -18,8 +18,11 @@ vector
 library(stringr)
 split_vector <- str_split(vector, " ", n = Inf)
 split_vector[seq(1, length(split_vector), by = 3)]
-split_vector[seq(from = 1, list(split_vector), by = 5)]
-
+split_vector[seq(from = 1, length(split_vector), by = 5)]
+split_vector
+split_vector
+answer <- split_vector[seq(1, length(22), 6)]
+answer
 ```
 
 ### Could not get every third word
@@ -48,8 +51,6 @@ x
 x <- m[2,2]:m[6,9]
 ```
 
-### Not sure which is the correct format to put the numbers in 
-
 
 # Challenge 3
 ```{r}
@@ -61,7 +62,6 @@ a[1,1,1,2]
 a[2,3,2,]
 a[1:5, 1:5, 3, 3]
 ```
-
 
 
 # Challenge 4
@@ -91,7 +91,6 @@ Primates
 
 
 ```
-
 
 
 # Challenge 5
