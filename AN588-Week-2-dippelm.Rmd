@@ -17,7 +17,9 @@ vector
 # install.packages("stringr")
 library(stringr)
 split_vector <- str_split(vector, " ", n = Inf)
-split_vector[seq(1, length(split_vector), 3)]
+split_vector[seq(1, length(split_vector), by = 3)]
+split_vector[seq(from = 1, list(split_vector), by = 5)]
+
 ```
 
 ### Could not get every third word
