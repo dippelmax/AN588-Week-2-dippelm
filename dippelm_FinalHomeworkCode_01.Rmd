@@ -94,10 +94,10 @@ m <- matrix(data = c(3, 0, 1, 23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow = 5,
 m
 df <- data.frame(m)
 df
-new_df <- df[df$X2, ]
-new_df
-factor_df <- as.factor(df[df$X3, ])
-factor_df
+c2 <- as.logical(df$X2)
+c3 <- as.factor(df$X3)
+newdf <- cbind.data.frame(df$X1,c2,c3)
+str(newdf)
 ```
 
 
