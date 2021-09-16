@@ -16,13 +16,12 @@ vector <- c("Stately, plump Buck Mulligan came from the stairhead, bearing a bow
 vector
 # install.packages("stringr")
 library(stringr)
-split_vector <- str_split(vector, " ", n = Inf)
-split_vector[seq(1, length(split_vector), by = 3)]
-split_vector[seq(from = 1, length(split_vector), by = 5)]
-split_vector
-split_vector
-answer <- split_vector[seq(1, length(22), 6)]
+
+split_vector2 <- str_split(vector, " ", n = Inf, simplify = TRUE)
+split_vector2
+answer <- split_vector2[seq(1, length(split_vector2), by = 3)]
 answer
+
 ```
 
 ### Could not get every third word
@@ -37,15 +36,10 @@ m
 x <- m[4, 5]
 x
 
-c2 <- m[ , 2]
-c3 <- m[ , 3]
-c6 <- m[ , 6]
-x <- cbind(c2,c3,c6)
+x <-m[,c(2,3,6)]
 x
 
-r6 <- m[6 , ]
-r8 <- m[8 , ]
-x <- cbind(r6,r8)
+x <- m[c(6,8),]
 x
 
 x <- m[2,2]:m[6,9]
