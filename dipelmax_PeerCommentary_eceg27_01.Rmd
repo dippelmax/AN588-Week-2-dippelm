@@ -19,13 +19,15 @@ vector <- c("Stately, plump Buck Mulligan came from the stairhead, bearing a bow
 vector
 # install.packages("stringr")
 library(stringr)
-split_vector <- str_split(vector, " ", n = Inf)
+split_vector <- str_split(vector, " ", n = Inf, simplify = TRUE)
 split_vector[seq(1, length(split_vector), by = 3)]
 split_vector[seq(from = 1, length(split_vector), by = 5)]
 split_vector
 split_vector
 answer <- split_vector[seq(1, length(22), 6)]
 answer
+
+
 ```
 
 ### Could not get every third word
