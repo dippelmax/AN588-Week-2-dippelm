@@ -1,0 +1,104 @@
+---
+title: "dippelm_OriginalHomeworkCode_01"
+author: "Max Dippel"
+date: "9/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Challenge 1
+```{r}
+# Challenge 1
+vector <- c("Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.")
+vector
+# install.packages("stringr")
+library(stringr)
+
+split_vector2 <- str_split(vector, " ", n = Inf, simplify = TRUE)
+split_vector2
+answer <- split_vector2[seq(1, length(split_vector2), by = 3)]
+answer
+
+```
+
+### Could not get every third word
+
+
+# Challenge 2
+```{r}
+# Challenge 2
+
+m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
+m
+x <- m[4, 5]
+x
+
+x <-m[,c(2,3,6)]
+x
+
+x <- m[c(6,8),]
+x
+
+x <- m[2,2]:m[6,9]
+```
+
+*don't forget to call that last one! (it was the hardest) -mel*
+
+# Challenge 3
+```{r}
+# Challenge 3
+
+a <- array(data = 400:1, dim = c(5, 5, 4, 4))
+a
+a[1,1,1,2]
+a[2,3,2,]
+a[1:5, 1:5, 3, 3]
+```
+
+
+# Challenge 4
+```{r}
+
+Lemuroidea <- c("Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae",
+    "Daubentoniidae")
+Lorisoidea <- c("Lorisidae", "Galagidae")
+Strepsirhini <- list(Lemuroidea, Lorisoidea)
+names(Strepsirhini) <- list("Lemuroidea", "Lorisoidea")
+Strepsirhini
+
+Platyrrhini <- c("Cebidae","Atelidae","Pitheciidae")
+Platyrrhini
+Catarrhini <- c("Cercopithecidae","Hylobatidae","Hominidae")
+Catarrhini
+Tarsioidea <- c("Tarsiidae")
+Anthropoidae <- list(Platyrrhini,Catarrhini)
+names(Anthropoidae) <- list("Platyrrhini","Catarrhini")
+Anthropoidae
+Haplorhini <- list(Anthropoidae, Tarsioidea)
+names(Haplorhini) <- list("Anthropoidae", "Tarsioidea")
+Haplorhini
+Primates <- list(Haplorhini,Strepsirhini)
+names(Primates) <- list("Haplorhini","Strepsirhini") 
+Primates
+
+
+```
+
+
+# Challenge 5
+```{r}
+
+m <- matrix(data = c(3, 0, 1, 23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow = 5, ncol = 3, byrow = TRUE)
+m
+df <- data.frame(m)
+df
+c2 <- as.logical(df$X2)
+c3 <- as.factor(df$X3)
+newdf <- cbind.data.frame(df$X1,c2,c3)
+str(newdf)
+```
+
+*Great work, but don't forget to annotate (and notice where questions ask you to explain)!! -Mel* 
